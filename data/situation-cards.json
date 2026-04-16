@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你喜歡一個人，但不確定對方的感覺。你會先表白還是繼續等？",
+    "entry": "你上一次喜歡一個人，是什麼感覺？"
+  },
+  {
+    "id": 2,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "朋友跟你說了一個秘密，後來你發現說出去會幫到另一個朋友。你怎麼辦？",
+    "entry": "你有沒有被朋友說漏過秘密？那時候你什麼感覺？"
+  },
+  {
+    "id": 3,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你發現最近很在意一個人的看法，但你不想讓他知道。你會怎麼做？",
+    "entry": "你最在意誰的看法？為什麼是他？"
+  },
+  {
+    "id": 4,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "有人一直對你很好，但你感覺不到心動。你會說實話還是慢慢疏遠？",
+    "entry": "你有沒有對某個人好，但對方好像感覺不到？"
+  },
+  {
+    "id": 5,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你跟一個重要的人吵架了，你覺得自己有七分對。你會先道歉嗎？",
+    "entry": "你上一次跟人吵架，是為了什麼？"
+  },
+  {
+    "id": 6,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "朋友在你面前說了另一個共同朋友的壞話。你選擇說什麼？",
+    "entry": "你有沒有在別人面前說過某個人的壞話？說完什麼感覺？"
+  },
+  {
+    "id": 7,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你最好的朋友做了一個你覺得很糟糕的決定。你說還是不說？",
+    "entry": "有沒有人曾經跟你說過你做的決定很糟糕？你怎麼反應？"
+  },
+  {
+    "id": 8,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "有人突然對你冷淡，你不知道原因。你會主動問嗎？",
+    "entry": "你有沒有突然對某個人冷淡過？那時候你在想什麼？"
+  },
+  {
+    "id": 9,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你很累，但朋友需要你陪。你怎麼決定？",
+    "entry": "你上一次說「我沒事」但其實很累，是什麼時候？"
+  },
+  {
+    "id": 10,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你喜歡的人同時在跟別人曖昧。你的第一反應是什麼？",
+    "entry": "你有沒有喜歡過一個讓你沒有安全感的人？"
+  },
+  {
+    "id": 11,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你一個人的時候最真實的樣子，和別人眼中的你，差在哪裡？",
+    "entry": "你有沒有一個只有自己知道的習慣或想法，從來沒告訴過任何人？"
+  },
+  {
+    "id": 12,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你最難接受自己哪一面，但其實它也幫過你？",
+    "entry": "你最常被人批評的一個特質是什麼？"
+  },
+  {
+    "id": 13,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "什麼事情讓你可以完全忘記時間，連手機都不想看？",
+    "entry": "上一次你完全投入一件事，是什麼時候？"
+  },
+  {
+    "id": 14,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你最常用什麼方式假裝自己沒事？",
+    "entry": "你難過的時候，第一個動作是什麼？"
+  },
+  {
+    "id": 15,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "有人真心稱讚你，你的第一反應是相信還是懷疑？",
+    "entry": "你上一次被人稱讚，你怎麼回應的？"
+  },
+  {
+    "id": 16,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你什麼時候最有安全感？那個感覺從哪裡來？",
+    "entry": "你現在生活裡，最讓你感覺穩定的一件事是什麼？"
+  },
+  {
+    "id": 17,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你最怕別人發現你其實是怎樣的人？",
+    "entry": "你有沒有一個面向，你覺得如果別人知道了會不喜歡你？"
+  },
+  {
+    "id": 18,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你什麼時候覺得自己最像自己？",
+    "entry": "最近一次你覺得「這才是我」，是在什麼情況下？"
+  },
+  {
+    "id": 19,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你有沒有一個一直想做但一直在等的事？在等什麼？",
+    "entry": "你有沒有一件事，你已經想了超過一年但還沒開始？"
+  },
+  {
+    "id": 20,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "如果今天是你人生的最後一天，你最後悔沒做的事是什麼？",
+    "entry": "你現在生活裡，有沒有一件你一直在推遲的事？"
+  },
+  {
+    "id": 21,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你全力投入一件事，但有人要你放棄。你怎麼辦？",
+    "entry": "你有沒有為了某件事，拒絕過別人的要求？"
+  },
+  {
+    "id": 22,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你失敗了，而且有人看見。你的第一反應是什麼？",
+    "entry": "你上一次失敗，你最在意的是失敗本身，還是別人怎麼看你？"
+  },
+  {
+    "id": 23,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你必須在兩個都重要的事情之間選一個，你怎麼決定？",
+    "entry": "你有沒有做過一個讓你很掙扎的選擇？那時候你怎麼決定的？"
+  },
+  {
+    "id": 24,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "有一個機會，但風險很高，而且只有你一個人知道。你跳嗎？",
+    "entry": "你是一個傾向冒險還是傾向穩定的人？你怎麼知道的？"
+  },
+  {
+    "id": 25,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你努力了很久但沒有結果。讓你繼續的理由是什麼？",
+    "entry": "你有沒有一件事，你不知道為什麼還在繼續，但就是沒辦法放棄？"
+  },
+  {
+    "id": 26,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "有人當眾否定你最在意的事。你怎麼回應？",
+    "entry": "你最在意的事是什麼？如果有人說它不重要，你什麼感覺？"
+  },
+  {
+    "id": 27,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你需要開口求助，但你非常不習慣。你最後怎麼做？",
+    "entry": "你上一次開口求助是什麼時候？開口之前你在想什麼？"
+  },
+  {
+    "id": 28,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你發現自己一直在重複同一個模式，但改變很難。你會怎麼開始？",
+    "entry": "你有沒有一個你自己都知道的壞習慣，但一直改不掉？"
+  },
+  {
+    "id": 29,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你做了一個讓自己後悔的決定。你怎麼跟自己和解？",
+    "entry": "你有沒有一個決定，你現在回想起來還是很難受？"
+  },
+  {
+    "id": 30,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "如果可以對五年前的自己說一句話，你說什麼？",
+    "entry": "五年前的你，最需要聽到的一句話是什麼？"
+  }
+]

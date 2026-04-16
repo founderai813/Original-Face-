@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "type": "connection",
+    "typeZh": "連結類",
+    "question": "想一個你生命裡讓你印象最深刻的人。他做了什麼讓你記住他？"
+  },
+  {
+    "id": 2,
+    "type": "connection",
+    "typeZh": "連結類",
+    "question": "想一個你生命裡跟你最不像的人。你最好奇他的什麼？"
+  },
+  {
+    "id": 3,
+    "type": "connection",
+    "typeZh": "連結類",
+    "question": "想一個你生命裡你覺得沒有被充分理解的人。你想讓他知道什麼？"
+  },
+  {
+    "id": 4,
+    "type": "connection",
+    "typeZh": "連結類",
+    "question": "想一個你生命裡你欣賞但從來沒說過的人。你欣賞他的什麼？"
+  },
+  {
+    "id": 5,
+    "type": "connection",
+    "typeZh": "連結類",
+    "question": "想一個你生命裡說過一句讓你記住的話的人。那句話是什麼？"
+  },
+  {
+    "id": 6,
+    "type": "tension",
+    "typeZh": "張力類",
+    "question": "想一個你生命裡跟你意見最不同的人。你們最大的分歧在哪裡？"
+  },
+  {
+    "id": 7,
+    "type": "tension",
+    "typeZh": "張力類",
+    "question": "想一個你生命裡比你更勇敢的人。你覺得他的勇氣從哪裡來？"
+  },
+  {
+    "id": 8,
+    "type": "tension",
+    "typeZh": "張力類",
+    "question": "想一個你生命裡最了解你的人。他看見了什麼你自己都沒注意到的事？"
+  },
+  {
+    "id": 9,
+    "type": "tension",
+    "typeZh": "張力類",
+    "question": "想一個你生命裡你虧欠過的人。你一直沒說出口的是什麼？"
+  },
+  {
+    "id": 10,
+    "type": "tension",
+    "typeZh": "張力類",
+    "question": "想一個你生命裡最真實的人。他的真實讓他付出了什麼代價？"
+  }
+]

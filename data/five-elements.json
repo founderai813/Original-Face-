@@ -1,0 +1,85 @@
+{
+  "elements": {
+    "wood": {
+      "key": "wood",
+      "zh": "木",
+      "color": { "bg": "#0a1a0c", "main": "#9dd89d" },
+      "nature": "向上生長、往外延伸",
+      "keyword": "成長、方向感、啟動",
+      "stems": ["甲", "乙"],
+      "branches": ["寅", "卯"]
+    },
+    "fire": {
+      "key": "fire",
+      "zh": "火",
+      "color": { "bg": "#160a05", "main": "#e8704a" },
+      "nature": "燃燒、發散、向外",
+      "keyword": "熱情、表達、感染力",
+      "stems": ["丙", "丁"],
+      "branches": ["巳", "午"]
+    },
+    "earth": {
+      "key": "earth",
+      "zh": "土",
+      "color": { "bg": "#141008", "main": "#d4a845" },
+      "nature": "承載、穩定、轉化",
+      "keyword": "承接、穩定、調和",
+      "stems": ["戊", "己"],
+      "branches": ["辰", "戌", "丑", "未"]
+    },
+    "metal": {
+      "key": "metal",
+      "zh": "金",
+      "color": { "bg": "#0a0e16", "main": "#a8cce0" },
+      "nature": "收斂、銳利、切割",
+      "keyword": "清醒、原則、取捨",
+      "stems": ["庚", "辛"],
+      "branches": ["申", "酉"]
+    },
+    "water": {
+      "key": "water",
+      "zh": "水",
+      "color": { "bg": "#060c18", "main": "#6090d0" },
+      "nature": "向下流動、滲透、潛藏",
+      "keyword": "智慧、觀察、潛藏",
+      "stems": ["壬", "癸"],
+      "branches": ["亥", "子"]
+    }
+  },
+  "generate": {
+    "wood": "fire",
+    "fire": "earth",
+    "earth": "metal",
+    "metal": "water",
+    "water": "wood"
+  },
+  "overcome": {
+    "wood": "earth",
+    "earth": "water",
+    "water": "fire",
+    "fire": "metal",
+    "metal": "wood"
+  },
+  "stemToElement": {
+    "甲": "wood", "乙": "wood",
+    "丙": "fire", "丁": "fire",
+    "戊": "earth", "己": "earth",
+    "庚": "metal", "辛": "metal",
+    "壬": "water", "癸": "water"
+  },
+  "branchToElement": {
+    "寅": "wood", "卯": "wood",
+    "辰": "earth",
+    "巳": "fire", "午": "fire",
+    "未": "earth",
+    "申": "metal", "酉": "metal",
+    "戌": "earth",
+    "亥": "water", "子": "water",
+    "丑": "earth"
+  },
+  "hostingSelectionByPlayers": {
+    "3": 1, "4": 1, "5": 1,
+    "6": 2, "7": 2, "8": 2,
+    "9": 3, "10": 3, "11": 3, "12": 3
+  }
+}

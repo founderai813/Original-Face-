@@ -1,0 +1,92 @@
+[
+  {
+    "id": "zheng-guan",
+    "name": "正官",
+    "role": "守護者",
+    "strengths": "重視承諾，說到做到",
+    "challenges": "太重規則，難以彈性",
+    "type": "正",
+    "polarity": "positive"
+  },
+  {
+    "id": "qi-sha",
+    "name": "七殺",
+    "role": "挑戰者",
+    "strengths": "帶來改變，不怕衝突",
+    "challenges": "強度太高，讓人壓迫",
+    "type": "偏",
+    "polarity": "negative"
+  },
+  {
+    "id": "zheng-yin",
+    "name": "正印",
+    "role": "滋養者",
+    "strengths": "給人安全感，重視學習",
+    "challenges": "太習慣給予，不擅接受",
+    "type": "正",
+    "polarity": "positive"
+  },
+  {
+    "id": "pian-yin",
+    "name": "偏印",
+    "role": "思考者",
+    "strengths": "獨特見解，需要獨處",
+    "challenges": "太沉浸自己，讓人距離",
+    "type": "偏",
+    "polarity": "negative"
+  },
+  {
+    "id": "shi-shen",
+    "name": "食神",
+    "role": "享受者",
+    "strengths": "活在當下，創造力豐富",
+    "challenges": "太享受過程，忘記目標",
+    "type": "正",
+    "polarity": "positive"
+  },
+  {
+    "id": "shang-guan",
+    "name": "傷官",
+    "role": "表達者",
+    "strengths": "直接真實，強烈表達慾",
+    "challenges": "太直接，時機不對",
+    "type": "偏",
+    "polarity": "negative"
+  },
+  {
+    "id": "zheng-cai",
+    "name": "正財",
+    "role": "建構者",
+    "strengths": "務實穩健，一步一步",
+    "challenges": "太重結果，忽略感受",
+    "type": "正",
+    "polarity": "positive"
+  },
+  {
+    "id": "pian-cai",
+    "name": "偏財",
+    "role": "流動者",
+    "strengths": "靈活變通，整合資源",
+    "challenges": "太分散，難以深入",
+    "type": "偏",
+    "polarity": "negative"
+  },
+  {
+    "id": "bi-jian",
+    "name": "比肩",
+    "role": "同行者",
+    "strengths": "重視平等，需被理解",
+    "challenges": "太重獨立，難接受幫助",
+    "type": "正",
+    "polarity": "positive"
+  },
+  {
+    "id": "jie-cai",
+    "name": "劫財",
+    "role": "競爭者",
+    "strengths": "衝勁強，越挫越勇",
+    "challenges": "太重輸贏，消耗不必要",
+    "type": "偏",
+    "polarity": "negative"
+  }
+]

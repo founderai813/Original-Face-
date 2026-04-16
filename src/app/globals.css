@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  background: #0a0a0a;
+  color: #e8e4d8;
+  font-family: "Noto Serif TC", "Source Han Serif TC", "PingFang TC", serif;
+}
+
+/* 金框按鈕樣式 */
+.btn-gold {
+  @apply relative inline-flex items-center justify-center px-8 py-3 text-gold-light tracking-widest transition-colors;
+  background: linear-gradient(180deg, #0a0a0a 0%, #151515 100%);
+  border: 1px solid #c49830;
+  box-shadow: 0 0 0 0.5px #a87a20, 0 10px 30px -10px rgba(236, 202, 90, 0.3);
+}
+
+.btn-gold:hover {
+  @apply text-white;
+  background: linear-gradient(180deg, #151515 0%, #1f1f1f 100%);
+  box-shadow: 0 0 0 0.5px #ecca5a, 0 10px 40px -10px rgba(236, 202, 90, 0.5);
+}
+
+.btn-gold:disabled {
+  @apply opacity-40 cursor-not-allowed;
+}
+
+/* 表單輸入框 */
+.input-ink {
+  @apply w-full bg-ink-soft border border-gold-dark/50 px-4 py-3 text-gold-light placeholder:text-ink-edge focus:outline-none focus:border-gold-main transition-colors;
+}
+
+.select-ink {
+  @apply input-ink appearance-none cursor-pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23c49830' viewBox='0 0 16 16'%3E%3Cpath d='M8 12 2 6h12z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 12px;
+  padding-right: 2.5rem;
+}
+
+.label-ink {
+  @apply block text-sm tracking-widest text-gold-main/80 mb-2;
+}
+
+/* 報告內容排版 */
+.report-prose {
+  @apply max-w-none text-gold-light/90 leading-relaxed;
+}
+
+.report-prose h2 {
+  @apply text-2xl text-gold-light mt-10 mb-4 tracking-wider border-l-2 border-gold-main pl-4;
+}
+
+.report-prose p {
+  @apply mb-4;
+}
+
+.report-prose strong {
+  @apply text-gold-light;
+}
