@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import type { ElementKey } from "@/lib/elements";
+import { apiUrl } from "@/lib/paths";
 
 interface FormState {
   name: string;
@@ -77,7 +78,7 @@ export default function BaziForm() {
 
     setSubmitting(true);
     try {
-      const res = await fetch("/api/report", {
+      const res = await fetch(apiUrl("/api/report"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
