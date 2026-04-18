@@ -1,3 +1,4 @@
+import Link from "next/link";
 import BaziForm from "@/components/BaziForm";
 
 export default function HomePage() {
@@ -18,18 +19,32 @@ export default function HomePage() {
           </p>
         </header>
 
-        <section className="mb-12 border-t border-b border-gold-dark/30 py-8 text-center">
-          <p className="text-gold-main/80 tracking-widest text-sm leading-relaxed">
-            輸入你的生辰八字，
-            <br className="md:hidden" />
-            獲得免費五行基礎報告。
+        {/* 線上體驗入口 */}
+        <section className="mb-12 border border-gold-main/40 p-8 text-center space-y-4">
+          <h2 className="text-xl tracking-widest text-gold-light">
+            線上五行探索
+          </h2>
+          <p className="text-gold-main/70 text-sm leading-relaxed">
+            抽牌、回答情境問題、對照你的命盤。
+            <br />
+            一個人就能玩，約 10 分鐘。
+          </p>
+          <Link href="/play" className="btn-gold inline-block">
+            開始探索
+          </Link>
+        </section>
+
+        {/* 直接輸入八字（實體工作坊掃碼入口） */}
+        <section className="mb-12 border-t border-gold-dark/30 pt-8 text-center">
+          <p className="text-gold-main/60 tracking-widest text-xs mb-6">
+            已經玩過實體桌遊？直接輸入八字
           </p>
         </section>
 
         <BaziForm />
 
         <footer className="mt-20 text-center text-gold-dark/60 text-xs tracking-widest">
-          © 本來面目｜五行自我探索遊戲
+          &copy; 本來面目｜五行自我探索遊戲
         </footer>
       </div>
     </main>

@@ -10,6 +10,12 @@
 import type { Bazi } from "./bazi";
 import { ELEMENTS, type ElementKey } from "./elements";
 
+export interface GameAnswer {
+  category: string;
+  question: string;
+  answer: string;
+}
+
 export interface ReportContext {
   /** 玩家姓名（用於人稱） */
   name: string;
@@ -19,6 +25,12 @@ export interface ReportContext {
   bazi: Bazi;
   /** 玩家在遊戲中直覺抽到的季節五行（可選，用於對比） */
   gameElement?: ElementKey | null;
+  /** 玩家在線上遊戲中對情境問題的回答（可選） */
+  gameAnswers?: GameAnswer[];
+  /** 玩家抽到的十神卡（可選） */
+  tenGodDrawn?: { name: string; role: string } | null;
+  /** 玩家對十神卡的反應（可選） */
+  tenGodReaction?: string;
 }
 
 /**
@@ -97,7 +109,7 @@ export function buildFullReportSystem(): string {
  * 格式化八字資料，用於 user message。
  */
 export function formatBaziForPrompt(ctx: ReportContext): string {
-  const { name, gender, bazi, gameElement } = ctx;
+  const { name, gender, bazi, gameElement, gameAnswers, tenGodDrawn, tenGodReaction } = ctx;
 
   const elementCount = Object.entries(bazi.elementCount)
     .map(([key, count]) => {
@@ -146,6 +158,31 @@ export function formatBaziForPrompt(ctx: ReportContext): string {
 
 ## 遊戲脈絡
 ${gameElementLine}
+${formatGameAnswers(gameAnswers)}${formatTenGod(tenGodDrawn, tenGodReaction)}
+請依照 system prompt 的風格指南和結構要求產出報告。直接輸出報告內容，不要有任何前言、不要說「好的」「以下是」之類的客套話。
 
-請依照 system prompt 的風格指南和結構要求產出報告。直接輸出報告內容，不要有任何前言、不要說「好的」「以下是」之類的客套話。`;
+${gameAnswers && gameAnswers.length > 0 ? "重要：報告中請自然地引用玩家在情境問題裡的回答（不要逐題引用，而是融入解讀）。讓玩家感覺到「你有在聽我說話」。" : ""}`;
+}
+
+function formatGameAnswers(answers?: GameAnswer[]): string {
+  if (!answers || answers.length === 0) return "";
+  const lines = answers
+    .map(
+      (a, i) =>
+        `第${i + 1}題（${a.category}）\n問：${a.question}\n答：${a.answer}`,
+    )
+    .join("\n\n");
+  return `\n## 玩家在情境問題中的回答\n${lines}\n`;
+}
+
+function formatTenGod(
+  drawn?: { name: string; role: string } | null,
+  reaction?: string,
+): string {
+  if (!drawn) return "";
+  let s = `\n## 玩家抽到的十神卡\n${drawn.name}（${drawn.role}）`;
+  if (reaction && reaction.trim()) {
+    s += `\n玩家的反應：「${reaction.trim()}」`;
+  }
+  return s + "\n";
 }

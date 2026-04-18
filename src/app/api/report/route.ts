@@ -4,6 +4,12 @@ import { calculateBazi } from "@/lib/bazi";
 import { streamReport } from "@/lib/ai-report";
 import type { ElementKey } from "@/lib/elements";
 
+const GameAnswerSchema = z.object({
+  category: z.string(),
+  question: z.string(),
+  answer: z.string(),
+});
+
 const ReportRequestSchema = z.object({
   name: z.string().min(1).max(50),
   gender: z.enum(["male", "female"]),
@@ -18,6 +24,12 @@ const ReportRequestSchema = z.object({
     .nullable()
     .optional(),
   tier: z.enum(["free", "full"]).default("free"),
+  gameAnswers: z.array(GameAnswerSchema).optional(),
+  tenGodDrawn: z
+    .object({ name: z.string(), role: z.string() })
+    .nullable()
+    .optional(),
+  tenGodReaction: z.string().optional(),
 });
 
 /**
@@ -77,6 +89,9 @@ export async function POST(request: Request) {
           bazi,
           gameElement: (input.gameElement ?? null) as ElementKey | null,
           tier: input.tier,
+          gameAnswers: input.gameAnswers,
+          tenGodDrawn: input.tenGodDrawn ?? undefined,
+          tenGodReaction: input.tenGodReaction,
         });
         for await (const chunk of generator) {
           controller.enqueue(encoder.encode(chunk));
