@@ -66,6 +66,57 @@ export const STYLE_GUIDE = `你是「本來面目」命盤系統的 AI 顧問。
 - 不要在報告中出現「AI」「語言模型」「作為助理」這些自我指涉。`;
 
 /**
+ * 初步讀出 prompt —— 不含命盤，只根據玩家的牌和回答。
+ * 輸出約 150–200 字。用途：鉤住玩家，讓他想繼續看命盤報告。
+ */
+export function buildPreliminarySystem(): string {
+  return `${STYLE_GUIDE}
+
+## 這一份是「初步讀出」，不是命盤報告
+
+你現在**沒有**玩家的八字命盤。你只有他在遊戲中抽到的牌和他的回答。
+
+- 長度：150–200 字，不要超過。
+- 語氣：像一個觀察力很強的人在跟他說「我注意到你…」
+- 結構：
+  1. 先反映他在回答中流露的一個模式或傾向（50 字）
+  2. 連結他抽到的季節卡能量，點出這個模式跟今天的狀態有什麼關係（60 字）
+  3. 丟一個問題給他，讓他想繼續往下探索（40 字）
+  4. 最後一句：暗示命盤可以告訴他更多，但不要推銷（30 字）
+- 重點：讓他覺得「你真的有在聽我說話」，而不只是複述他的答案。
+- 不要提到八字、命盤、五行這些詞——這是純粹從他的回答讀出的東西。`;
+}
+
+/**
+ * 格式化遊戲數據，用於初步讀出的 user message（不含八字）。
+ */
+export function formatPreliminaryPrompt(ctx: {
+  name: string;
+  seasonCard: { name: string; elementZh: string; energy: string };
+  tenGodCard: { name: string; role: string };
+  tenGodReaction?: string;
+  gameAnswers: GameAnswer[];
+}): string {
+  const answersText = ctx.gameAnswers
+    .map((a, i) => `第${i + 1}題（${a.category}）\n問：${a.question}\n答：${a.answer}`)
+    .join("\n\n");
+
+  return `請為以下玩家生成初步讀出：
+
+姓名：${ctx.name}
+
+## 他今天抽到的牌
+- 季節卡：${ctx.seasonCard.name}（${ctx.seasonCard.elementZh}，能量：${ctx.seasonCard.energy}）
+- 十神卡：${ctx.tenGodCard.name}（${ctx.tenGodCard.role}）
+${ctx.tenGodReaction ? `- 他對十神卡的反應：「${ctx.tenGodReaction}」` : ""}
+
+## 他在情境問題中的回答（共 ${ctx.gameAnswers.length} 題）
+${answersText}
+
+請依照 system prompt 產出初步讀出。直接輸出內容，不要前言。`;
+}
+
+/**
  * 免費基礎報告 prompt。
  * 輸出約 300 字，重點放在日主五行 + 月令 + 一個功課。
  */
