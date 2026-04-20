@@ -4,209 +4,369 @@
     "category": "relationship",
     "categoryZh": "關係",
     "question": "你喜歡一個人，但不確定對方的感覺。你會先表白還是繼續等？",
-    "entry": "你上一次喜歡一個人，是什麼感覺？"
+    "entry": "你上一次喜歡一個人，是什麼感覺？",
+    "options": [
+      { "label": "直接表白，不想再浪費時間", "element": "wood" },
+      { "label": "先多互動，讓感情自然發展", "element": "earth" },
+      { "label": "找朋友問意見再決定", "element": "fire" },
+      { "label": "先觀察他的反應，看懂了再行動", "element": "water" }
+    ]
   },
   {
     "id": 2,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "朋友跟你說了一個秘密，後來你發現說出去會幫到另一個朋友。你怎麼辦？",
-    "entry": "你有沒有被朋友說漏過秘密？那時候你什麼感覺？"
+    "entry": "你有沒有被朋友說漏過秘密？那時候你什麼感覺？",
+    "options": [
+      { "label": "守住秘密，承諾就是承諾", "element": "metal" },
+      { "label": "先問原本的朋友能不能講", "element": "earth" },
+      { "label": "用不洩漏來源的方式提醒另一方", "element": "water" },
+      { "label": "說出去，對方受益比較重要", "element": "wood" }
+    ]
   },
   {
     "id": 3,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "你發現最近很在意一個人的看法，但你不想讓他知道。你會怎麼做？",
-    "entry": "你最在意誰的看法？為什麼是他？"
+    "entry": "你最在意誰的看法？為什麼是他？",
+    "options": [
+      { "label": "假裝沒事，繼續照常相處", "element": "metal" },
+      { "label": "反而會故意跟他拉開距離", "element": "water" },
+      { "label": "用行動證明自己，讓他自己來看見", "element": "wood" },
+      { "label": "會忍不住偷偷觀察他的反應", "element": "fire" }
+    ]
   },
   {
     "id": 4,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "有人一直對你很好，但你感覺不到心動。你會說實話還是慢慢疏遠？",
-    "entry": "你有沒有對某個人好，但對方好像感覺不到？"
+    "entry": "你有沒有對某個人好，但對方好像感覺不到？",
+    "options": [
+      { "label": "直接說清楚，對大家都好", "element": "metal" },
+      { "label": "慢慢疏遠，不想傷害他", "element": "water" },
+      { "label": "保持當朋友的距離", "element": "earth" },
+      { "label": "先觀察自己會不會慢慢喜歡", "element": "fire" }
+    ]
   },
   {
     "id": 5,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "你跟一個重要的人吵架了，你覺得自己有七分對。你會先道歉嗎？",
-    "entry": "你上一次跟人吵架，是為了什麼？"
+    "entry": "你上一次跟人吵架，是為了什麼？",
+    "options": [
+      { "label": "會，關係比對錯重要", "element": "earth" },
+      { "label": "不會，那三分也值得說清楚", "element": "metal" },
+      { "label": "冷靜一陣子再說", "element": "water" },
+      { "label": "寫訊息講清楚，不見面", "element": "wood" }
+    ]
   },
   {
     "id": 6,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "朋友在你面前說了另一個共同朋友的壞話。你選擇說什麼？",
-    "entry": "你有沒有在別人面前說過某個人的壞話？說完什麼感覺？"
+    "entry": "你有沒有在別人面前說過某個人的壞話？說完什麼感覺？",
+    "options": [
+      { "label": "直接打斷，不跟著說", "element": "metal" },
+      { "label": "幫那個人講兩句話", "element": "wood" },
+      { "label": "安靜聽，不附和也不反駁", "element": "water" },
+      { "label": "試著理解他為什麼會這樣說", "element": "earth" }
+    ]
   },
   {
     "id": 7,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "你最好的朋友做了一個你覺得很糟糕的決定。你說還是不說？",
-    "entry": "有沒有人曾經跟你說過你做的決定很糟糕？你怎麼反應？"
+    "entry": "有沒有人曾經跟你說過你做的決定很糟糕？你怎麼反應？",
+    "options": [
+      { "label": "一定說，不說就不是真朋友", "element": "wood" },
+      { "label": "先聽他怎麼想再決定要不要說", "element": "water" },
+      { "label": "默默支持，他的人生他做主", "element": "earth" },
+      { "label": "只點一下，不強迫他同意", "element": "metal" }
+    ]
   },
   {
     "id": 8,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "有人突然對你冷淡，你不知道原因。你會主動問嗎？",
-    "entry": "你有沒有突然對某個人冷淡過？那時候你在想什麼？"
+    "entry": "你有沒有突然對某個人冷淡過？那時候你在想什麼？",
+    "options": [
+      { "label": "馬上問，不喜歡不明不白", "element": "wood" },
+      { "label": "不問，等他自己開口", "element": "metal" },
+      { "label": "先反省自己是不是做錯什麼", "element": "water" },
+      { "label": "讓相處氣氛保持正常，繼續觀察", "element": "earth" }
+    ]
   },
   {
     "id": 9,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "你很累，但朋友需要你陪。你怎麼決定？",
-    "entry": "你上一次說「我沒事」但其實很累，是什麼時候？"
+    "entry": "你上一次說「我沒事」但其實很累，是什麼時候？",
+    "options": [
+      { "label": "去，朋友比我重要", "element": "earth" },
+      { "label": "老實說我今天需要休息", "element": "metal" },
+      { "label": "短暫露面一下就回家", "element": "fire" },
+      { "label": "問他是不是真的非我不可", "element": "water" }
+    ]
   },
   {
     "id": 10,
     "category": "relationship",
     "categoryZh": "關係",
     "question": "你喜歡的人同時在跟別人曖昧。你的第一反應是什麼？",
-    "entry": "你有沒有喜歡過一個讓你沒有安全感的人？"
+    "entry": "你有沒有喜歡過一個讓你沒有安全感的人？",
+    "options": [
+      { "label": "直接問他狀態是什麼", "element": "wood" },
+      { "label": "退出，不想競爭", "element": "metal" },
+      { "label": "讓自己也被看見，繼續努力", "element": "fire" },
+      { "label": "先搞清楚自己是不是太投入", "element": "water" }
+    ]
   },
   {
     "id": 11,
     "category": "self",
     "categoryZh": "自我",
     "question": "你一個人的時候最真實的樣子，和別人眼中的你，差在哪裡？",
-    "entry": "你有沒有一個只有自己知道的習慣或想法，從來沒告訴過任何人？"
+    "entry": "你有沒有一個只有自己知道的習慣或想法，從來沒告訴過任何人？",
+    "textOnly": true
   },
   {
     "id": 12,
     "category": "self",
     "categoryZh": "自我",
     "question": "你最難接受自己哪一面，但其實它也幫過你？",
-    "entry": "你最常被人批評的一個特質是什麼？"
+    "entry": "你最常被人批評的一個特質是什麼？",
+    "options": [
+      { "label": "太敏感——但讓我能感受到細節", "element": "water" },
+      { "label": "太固執——但讓我撐過很多事", "element": "metal" },
+      { "label": "太衝——但讓我敢做別人不敢的", "element": "wood" },
+      { "label": "太心軟——但讓我能陪別人走過低谷", "element": "earth" }
+    ]
   },
   {
     "id": 13,
     "category": "self",
     "categoryZh": "自我",
     "question": "什麼事情讓你可以完全忘記時間，連手機都不想看？",
-    "entry": "上一次你完全投入一件事，是什麼時候？"
+    "entry": "上一次你完全投入一件事，是什麼時候？",
+    "options": [
+      { "label": "動手做東西的時候（創作、修理、烹飪）", "element": "wood" },
+      { "label": "跟對的人聊到停不下來", "element": "fire" },
+      { "label": "照顧別人、陪別人的時候", "element": "earth" },
+      { "label": "閱讀、寫作、思考的時候", "element": "water" }
+    ]
   },
   {
     "id": 14,
     "category": "self",
     "categoryZh": "自我",
     "question": "你最常用什麼方式假裝自己沒事？",
-    "entry": "你難過的時候，第一個動作是什麼？"
+    "entry": "你難過的時候，第一個動作是什麼？",
+    "options": [
+      { "label": "笑著帶過，轉移話題", "element": "fire" },
+      { "label": "一個人躲起來", "element": "water" },
+      { "label": "把自己塞滿行程", "element": "wood" },
+      { "label": "先照顧別人來分散注意力", "element": "earth" }
+    ]
   },
   {
     "id": 15,
     "category": "self",
     "categoryZh": "自我",
     "question": "有人真心稱讚你，你的第一反應是相信還是懷疑？",
-    "entry": "你上一次被人稱讚，你怎麼回應的？"
+    "entry": "你上一次被人稱讚，你怎麼回應的？",
+    "options": [
+      { "label": "懷疑他是不是有求於我", "element": "water" },
+      { "label": "開心接受，回他一句謝謝", "element": "fire" },
+      { "label": "會不好意思，趕快岔開話題", "element": "earth" },
+      { "label": "覺得他只是客套", "element": "metal" }
+    ]
   },
   {
     "id": 16,
     "category": "self",
     "categoryZh": "自我",
     "question": "你什麼時候最有安全感？那個感覺從哪裡來？",
-    "entry": "你現在生活裡，最讓你感覺穩定的一件事是什麼？"
+    "entry": "你現在生活裡，最讓你感覺穩定的一件事是什麼？",
+    "options": [
+      { "label": "一個人獨處的時候", "element": "water" },
+      { "label": "跟家人或伴侶在一起的時候", "element": "earth" },
+      { "label": "正在投入做一件事的時候", "element": "wood" },
+      { "label": "存款到一個數字的時候", "element": "metal" }
+    ]
   },
   {
     "id": 17,
     "category": "self",
     "categoryZh": "自我",
     "question": "你最怕別人發現你其實是怎樣的人？",
-    "entry": "你有沒有一個面向，你覺得如果別人知道了會不喜歡你？"
+    "entry": "你有沒有一個面向，你覺得如果別人知道了會不喜歡你？",
+    "options": [
+      { "label": "其實我比外表看起來還脆弱", "element": "water" },
+      { "label": "其實我很在意輸贏", "element": "wood" },
+      { "label": "其實我沒那麼在乎別人", "element": "metal" },
+      { "label": "其實我很需要被喜歡", "element": "fire" }
+    ]
   },
   {
     "id": 18,
     "category": "self",
     "categoryZh": "自我",
     "question": "你什麼時候覺得自己最像自己？",
-    "entry": "最近一次你覺得「這才是我」，是在什麼情況下？"
+    "entry": "最近一次你覺得「這才是我」，是在什麼情況下？",
+    "options": [
+      { "label": "跟老朋友聊天講廢話時", "element": "fire" },
+      { "label": "一個人在做自己喜歡的事時", "element": "water" },
+      { "label": "在幫助別人、被需要時", "element": "earth" },
+      { "label": "下了個困難決定、負起責任時", "element": "metal" }
+    ]
   },
   {
     "id": 19,
     "category": "self",
     "categoryZh": "自我",
     "question": "你有沒有一個一直想做但一直在等的事？在等什麼？",
-    "entry": "你有沒有一件事，你已經想了超過一年但還沒開始？"
+    "entry": "你有沒有一件事，你已經想了超過一年但還沒開始？",
+    "options": [
+      { "label": "等時機——還沒準備好", "element": "water" },
+      { "label": "等錢——資源還不夠", "element": "metal" },
+      { "label": "等許可——怕身邊的人反對", "element": "earth" },
+      { "label": "其實沒在等，只是懶", "element": "wood" }
+    ]
   },
   {
     "id": 20,
     "category": "self",
     "categoryZh": "自我",
     "question": "如果今天是你人生的最後一天，你最後悔沒做的事是什麼？",
-    "entry": "你現在生活裡，有沒有一件你一直在推遲的事？"
+    "entry": "你現在生活裡，有沒有一件你一直在推遲的事？",
+    "textOnly": true
   },
   {
     "id": 21,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "你全力投入一件事，但有人要你放棄。你怎麼辦？",
-    "entry": "你有沒有為了某件事，拒絕過別人的要求？"
+    "entry": "你有沒有為了某件事，拒絕過別人的要求？",
+    "options": [
+      { "label": "繼續做，不被影響", "element": "wood" },
+      { "label": "停下來想想對方的理由", "element": "water" },
+      { "label": "找個折衷的做法", "element": "earth" },
+      { "label": "說清楚這是我的選擇，不討論", "element": "metal" }
+    ]
   },
   {
     "id": 22,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "你失敗了，而且有人看見。你的第一反應是什麼？",
-    "entry": "你上一次失敗，你最在意的是失敗本身，還是別人怎麼看你？"
+    "entry": "你上一次失敗，你最在意的是失敗本身，還是別人怎麼看你？",
+    "options": [
+      { "label": "先假裝沒事，等沒人再消化", "element": "metal" },
+      { "label": "笑著自嘲帶過", "element": "fire" },
+      { "label": "回家後一個人反覆回想", "element": "water" },
+      { "label": "立刻再試一次，不給自己空隙", "element": "wood" }
+    ]
   },
   {
     "id": 23,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "你必須在兩個都重要的事情之間選一個，你怎麼決定？",
-    "entry": "你有沒有做過一個讓你很掙扎的選擇？那時候你怎麼決定的？"
+    "entry": "你有沒有做過一個讓你很掙扎的選擇？那時候你怎麼決定的？",
+    "options": [
+      { "label": "聽直覺，哪個想到就開心", "element": "fire" },
+      { "label": "列清單比較利弊", "element": "metal" },
+      { "label": "問自己五年後會後悔哪個", "element": "water" },
+      { "label": "看哪個可以同時照顧到更多人", "element": "earth" }
+    ]
   },
   {
     "id": 24,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "有一個機會，但風險很高，而且只有你一個人知道。你跳嗎？",
-    "entry": "你是一個傾向冒險還是傾向穩定的人？你怎麼知道的？"
+    "entry": "你是一個傾向冒險還是傾向穩定的人？你怎麼知道的？",
+    "options": [
+      { "label": "跳，機會不會等", "element": "wood" },
+      { "label": "先分析再決定", "element": "metal" },
+      { "label": "找個人商量再說", "element": "earth" },
+      { "label": "先放著，觀察一段時間", "element": "water" }
+    ]
   },
   {
     "id": 25,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "你努力了很久但沒有結果。讓你繼續的理由是什麼？",
-    "entry": "你有沒有一件事，你不知道為什麼還在繼續，但就是沒辦法放棄？"
+    "entry": "你有沒有一件事，你不知道為什麼還在繼續，但就是沒辦法放棄？",
+    "options": [
+      { "label": "我相信還會有突破", "element": "fire" },
+      { "label": "我不想承認自己失敗", "element": "metal" },
+      { "label": "有些人在看著我，不能半途而廢", "element": "earth" },
+      { "label": "做的過程本身就有意義", "element": "water" }
+    ]
   },
   {
     "id": 26,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "有人當眾否定你最在意的事。你怎麼回應？",
-    "entry": "你最在意的事是什麼？如果有人說它不重要，你什麼感覺？"
+    "entry": "你最在意的事是什麼？如果有人說它不重要，你什麼感覺？",
+    "options": [
+      { "label": "當場反駁回去", "element": "wood" },
+      { "label": "沈默，事後再找機會解釋", "element": "water" },
+      { "label": "笑笑帶過，心裡記一筆", "element": "metal" },
+      { "label": "試著理解他為什麼這樣看", "element": "earth" }
+    ]
   },
   {
     "id": 27,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "你需要開口求助，但你非常不習慣。你最後怎麼做？",
-    "entry": "你上一次開口求助是什麼時候？開口之前你在想什麼？"
+    "entry": "你上一次開口求助是什麼時候？開口之前你在想什麼？",
+    "options": [
+      { "label": "硬著頭皮開口", "element": "wood" },
+      { "label": "用訊息代替當面說", "element": "water" },
+      { "label": "先還一個人情再求", "element": "earth" },
+      { "label": "寧可自己硬撐也不開口", "element": "metal" }
+    ]
   },
   {
     "id": 28,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "你發現自己一直在重複同一個模式，但改變很難。你會怎麼開始？",
-    "entry": "你有沒有一個你自己都知道的壞習慣，但一直改不掉？"
+    "entry": "你有沒有一個你自己都知道的壞習慣，但一直改不掉？",
+    "textOnly": true
   },
   {
     "id": 29,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "你做了一個讓自己後悔的決定。你怎麼跟自己和解？",
-    "entry": "你有沒有一個決定，你現在回想起來還是很難受？"
+    "entry": "你有沒有一個決定，你現在回想起來還是很難受？",
+    "options": [
+      { "label": "告訴自己當時只能這樣", "element": "earth" },
+      { "label": "從中找到可以帶走的教訓", "element": "metal" },
+      { "label": "允許自己還在難受，不急著和解", "element": "water" },
+      { "label": "立刻去做一件新的事來轉移", "element": "wood" }
+    ]
   },
   {
     "id": 30,
     "category": "challenge",
     "categoryZh": "挑戰",
     "question": "如果可以對五年前的自己說一句話，你說什麼？",
-    "entry": "五年前的你，最需要聽到的一句話是什麼？"
+    "entry": "五年前的你，最需要聽到的一句話是什麼？",
+    "textOnly": true
   }
 ]

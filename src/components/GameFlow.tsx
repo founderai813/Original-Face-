@@ -11,6 +11,7 @@ import {
   type TenGodCard,
   type PlayerAnswer,
   type GamePhase,
+  type ChoiceOption,
 } from "@/lib/game";
 import type { ElementKey } from "@/lib/elements";
 import { apiUrl } from "@/lib/paths";
@@ -37,7 +38,8 @@ export default function GameFlow() {
   const total = useMemo(() => totalQuestionCount(phases), [phases]);
   const [phaseIdx, setPhaseIdx] = useState(0);
   const [cardIdx, setCardIdx] = useState(0);
-  const [currentAnswer, setCurrentAnswer] = useState("");
+  const [currentText, setCurrentText] = useState("");
+  const [currentChoice, setCurrentChoice] = useState<ChoiceOption | null>(null);
   const [playerAnswers, setPlayerAnswers] = useState<PlayerAnswer[]>([]);
   const [showPhaseIntro, setShowPhaseIntro] = useState(true);
 
@@ -81,15 +83,27 @@ export default function GameFlow() {
 
   // ── Step 2：情境問題 ──
   function handleAnswerSubmit() {
-    const trimmed = currentAnswer.trim();
-    if (!trimmed || !currentCard) return;
+    if (!currentCard) return;
 
-    const newAnswers = [
-      ...playerAnswers,
-      { card: currentCard, answer: trimmed },
-    ];
-    setPlayerAnswers(newAnswers);
-    setCurrentAnswer("");
+    const isChoice = !!currentCard.options && !currentCard.textOnly;
+    const trimmed = currentText.trim();
+
+    // 檢查是否有回答
+    if (isChoice && !currentChoice) return;
+    if (!isChoice && !trimmed) return;
+
+    const answer: PlayerAnswer = { card: currentCard };
+    if (isChoice && currentChoice) {
+      answer.choice = currentChoice.label;
+      answer.element = currentChoice.element;
+    }
+    if (trimmed) {
+      answer.text = trimmed;
+    }
+
+    setPlayerAnswers([...playerAnswers, answer]);
+    setCurrentText("");
+    setCurrentChoice(null);
 
     if (cardIdx < currentPhase.cards.length - 1) {
       setCardIdx(cardIdx + 1);
@@ -124,7 +138,9 @@ export default function GameFlow() {
           gameAnswers: playerAnswers.map((pa) => ({
             category: pa.card.categoryZh,
             question: pa.card.question,
-            answer: pa.answer,
+            choice: pa.choice,
+            element: pa.element,
+            text: pa.text,
           })),
         }),
       });
@@ -168,7 +184,9 @@ export default function GameFlow() {
           gameAnswers: playerAnswers.map((pa) => ({
             category: pa.card.categoryZh,
             question: pa.card.question,
-            answer: pa.answer,
+            choice: pa.choice,
+            element: pa.element,
+            text: pa.text,
           })),
           tenGodDrawn: tenGodCard
             ? { name: tenGodCard.name, role: tenGodCard.role }
@@ -350,19 +368,51 @@ export default function GameFlow() {
                 <p className="text-gold-light text-lg leading-relaxed">
                   {currentCard.question}
                 </p>
-                <textarea
-                  className="input-ink min-h-[120px] resize-none"
-                  placeholder="說真話就好。不用完美，真的就好。"
-                  value={currentAnswer}
-                  onChange={(e) => setCurrentAnswer(e.target.value)}
-                />
+
+                {/* 選擇題：顯示 4 個選項按鈕 */}
+                {currentCard.options && !currentCard.textOnly && (
+                  <div className="space-y-2">
+                    {currentCard.options.map((opt) => (
+                      <button
+                        key={opt.label}
+                        onClick={() => setCurrentChoice(opt)}
+                        className={`w-full text-left px-4 py-3 border transition-all ${
+                          currentChoice?.label === opt.label
+                            ? "border-gold-light bg-gold-main/10 text-gold-light"
+                            : "border-gold-dark/50 text-gold-main/80 hover:border-gold-main/60 hover:text-gold-light"
+                        }`}
+                      >
+                        {opt.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
+
+                {/* 填充題：顯示 textarea */}
+                {(currentCard.textOnly || !currentCard.options) && (
+                  <textarea
+                    className="input-ink min-h-[120px] resize-none"
+                    placeholder="說真話就好。不用完美，真的就好。"
+                    value={currentText}
+                    onChange={(e) => setCurrentText(e.target.value)}
+                  />
+                )}
+
                 <div className="flex justify-between items-center">
                   <span className="text-gold-dark/40 text-xs">
-                    {currentAnswer.trim().length} 字
+                    {currentCard.options && !currentCard.textOnly
+                      ? currentChoice
+                        ? "已選擇"
+                        : "選一個"
+                      : `${currentText.trim().length} 字`}
                   </span>
                   <button
                     onClick={handleAnswerSubmit}
-                    disabled={currentAnswer.trim().length < 2}
+                    disabled={
+                      currentCard.options && !currentCard.textOnly
+                        ? !currentChoice
+                        : currentText.trim().length < 2
+                    }
                     className="btn-gold"
                   >
                     {globalIdx < total - 1 ? "下一題" : "完成所有問題"}

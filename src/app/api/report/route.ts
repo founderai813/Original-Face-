@@ -7,7 +7,9 @@ import type { ElementKey } from "@/lib/elements";
 const GameAnswerSchema = z.object({
   category: z.string(),
   question: z.string(),
-  answer: z.string(),
+  choice: z.string().optional(),
+  element: z.enum(["wood", "fire", "earth", "metal", "water"]).optional(),
+  text: z.string().optional(),
 });
 
 const ReportRequestSchema = z.object({

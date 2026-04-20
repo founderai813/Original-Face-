@@ -13,7 +13,12 @@ import { ELEMENTS, type ElementKey } from "./elements";
 export interface GameAnswer {
   category: string;
   question: string;
-  answer: string;
+  /** 選擇題選的選項文字 */
+  choice?: string;
+  /** 該選項對應的五行傾向（使用者看不到這個欄位，只有 AI 知道） */
+  element?: ElementKey;
+  /** 填充題的自由回答 */
+  text?: string;
 }
 
 export interface ReportContext {
@@ -97,9 +102,16 @@ export function formatPreliminaryPrompt(ctx: {
   tenGodReaction?: string;
   gameAnswers: GameAnswer[];
 }): string {
-  const answersText = ctx.gameAnswers
-    .map((a, i) => `第${i + 1}題（${a.category}）\n問：${a.question}\n答：${a.answer}`)
-    .join("\n\n");
+  const answersText = ctx.gameAnswers.map(formatOneAnswer).join("\n\n");
+
+  const counts: Record<string, number> = {};
+  for (const a of ctx.gameAnswers) {
+    if (a.element) counts[a.element] = (counts[a.element] ?? 0) + 1;
+  }
+  const distribution = Object.entries(counts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([el, n]) => `${el}=${n}`)
+    .join("、");
 
   return `請為以下玩家生成初步讀出：
 
@@ -110,8 +122,12 @@ export function formatPreliminaryPrompt(ctx: {
 - 十神卡：${ctx.tenGodCard.name}（${ctx.tenGodCard.role}）
 ${ctx.tenGodReaction ? `- 他對十神卡的反應：「${ctx.tenGodReaction}」` : ""}
 
-## 他在情境問題中的回答（共 ${ctx.gameAnswers.length} 題）
+## 他的情境題選擇與回答（共 ${ctx.gameAnswers.length} 題）
 ${answersText}
+
+## 選擇題五行傾向統計
+${distribution || "（無選擇題）"}
+（使用者看不到這個分佈。你可以用它判斷他的選擇偏向哪些五行。）
 
 請依照 system prompt 產出初步讀出。直接輸出內容，不要前言。`;
 }
@@ -215,15 +231,32 @@ ${formatGameAnswers(gameAnswers)}${formatTenGod(tenGodDrawn, tenGodReaction)}
 ${gameAnswers && gameAnswers.length > 0 ? "重要：報告中請自然地引用玩家在情境問題裡的回答（不要逐題引用，而是融入解讀）。讓玩家感覺到「你有在聽我說話」。" : ""}`;
 }
 
+function formatOneAnswer(a: GameAnswer, i: number): string {
+  const parts = [`第${i + 1}題（${a.category}）`, `問：${a.question}`];
+  if (a.choice) {
+    parts.push(`選擇：${a.choice}（五行傾向：${a.element ?? "?"}）`);
+  }
+  if (a.text) {
+    parts.push(`回答：${a.text}`);
+  }
+  return parts.join("\n");
+}
+
 function formatGameAnswers(answers?: GameAnswer[]): string {
   if (!answers || answers.length === 0) return "";
-  const lines = answers
-    .map(
-      (a, i) =>
-        `第${i + 1}題（${a.category}）\n問：${a.question}\n答：${a.answer}`,
-    )
-    .join("\n\n");
-  return `\n## 玩家在情境問題中的回答\n${lines}\n`;
+  const lines = answers.map(formatOneAnswer).join("\n\n");
+
+  // 統計五行傾向分佈
+  const counts: Record<string, number> = {};
+  for (const a of answers) {
+    if (a.element) counts[a.element] = (counts[a.element] ?? 0) + 1;
+  }
+  const distribution = Object.entries(counts)
+    .sort((a, b) => b[1] - a[1])
+    .map(([el, n]) => `${el}=${n}`)
+    .join("、");
+
+  return `\n## 玩家在情境問題中的選擇與回答\n${lines}\n\n## 選擇題的五行傾向統計\n${distribution || "（無選擇題）"}\n（使用者看不到這個分佈，但你可以用來判讀他的選擇模式）\n`;
 }
 
 function formatTenGod(
