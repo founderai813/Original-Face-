@@ -368,5 +368,370 @@
     "question": "如果可以對五年前的自己說一句話，你說什麼？",
     "entry": "五年前的你，最需要聽到的一句話是什麼？",
     "textOnly": true
+  },
+  {
+    "id": 31,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你有沒有一個人，你其實很想靠近但一直沒有？為什麼？",
+    "entry": "你最近有沒有想起一個好久沒聯繫的人？",
+    "options": [
+      { "label": "怕被拒絕", "element": "water" },
+      { "label": "不知道怎麼開口", "element": "earth" },
+      { "label": "覺得時機還沒到", "element": "metal" },
+      { "label": "其實一直在靠近，只是對方沒感覺", "element": "fire" }
+    ]
+  },
+  {
+    "id": 32,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "朋友取得了你一直想要的成就。你心裡第一個反應是？",
+    "entry": "你有沒有嫉妒過一個你喜歡的人？",
+    "options": [
+      { "label": "替他開心，真心的", "element": "earth" },
+      { "label": "開心但也有點酸", "element": "fire" },
+      { "label": "會反省自己為什麼還沒做到", "element": "water" },
+      { "label": "激起我的動力，趕快行動", "element": "wood" }
+    ]
+  },
+  {
+    "id": 33,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你答應了一件事，但做到一半發現超出能力。你怎麼辦？",
+    "entry": "你有沒有答應過一件後來超後悔的事？",
+    "options": [
+      { "label": "硬撐到底，答應就要做到", "element": "metal" },
+      { "label": "老實說做不到，重新協調", "element": "wood" },
+      { "label": "偷偷找人幫忙", "element": "earth" },
+      { "label": "拖到最後一刻才處理", "element": "water" }
+    ]
+  },
+  {
+    "id": 34,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "有人在背後議論你。你知道了但沒有證據。你怎麼處理？",
+    "entry": "你有沒有被背後說過閒話？那時候你怎麼應對的？",
+    "options": [
+      { "label": "找他當面問清楚", "element": "wood" },
+      { "label": "假裝不知道，繼續觀察", "element": "water" },
+      { "label": "跟自己信任的人聊聊", "element": "earth" },
+      { "label": "切掉這段關係，不值得", "element": "metal" }
+    ]
+  },
+  {
+    "id": 35,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你最好的朋友交了一個你很不喜歡的新對象。你說嗎？",
+    "entry": "你有沒有不認同過朋友的感情選擇？",
+    "options": [
+      { "label": "直接說，這是為他好", "element": "wood" },
+      { "label": "只在他問我的時候才說", "element": "metal" },
+      { "label": "不說，他開心就好", "element": "earth" },
+      { "label": "先觀察一陣子再判斷", "element": "water" }
+    ]
+  },
+  {
+    "id": 36,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你跟某人曖昧了很久，但就是沒有下一步。你會怎麼做？",
+    "entry": "你覺得曖昧是享受還是煎熬？",
+    "options": [
+      { "label": "直接捅破，不管結果", "element": "wood" },
+      { "label": "享受現在這樣就好", "element": "fire" },
+      { "label": "製造一個契機讓對方表態", "element": "water" },
+      { "label": "慢慢退出，保護自己", "element": "metal" }
+    ]
+  },
+  {
+    "id": 37,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你身邊有人正在經歷低潮，但他不想被幫助。你怎麼做？",
+    "entry": "你低潮的時候，希望別人怎麼對你？",
+    "options": [
+      { "label": "就在旁邊，不說話但讓他知道我在", "element": "earth" },
+      { "label": "尊重他的選擇，等他開口", "element": "metal" },
+      { "label": "用行動表達關心，而不是用話語", "element": "wood" },
+      { "label": "直接跟他說「我知道你不好」", "element": "fire" }
+    ]
+  },
+  {
+    "id": 38,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你發現一段關係裡你付出得比較多。你的反應是？",
+    "entry": "你有沒有在一段關係裡覺得不平衡？",
+    "options": [
+      { "label": "直接講，我們需要平衡", "element": "metal" },
+      { "label": "默默減少付出，看對方會不會注意到", "element": "water" },
+      { "label": "繼續給，我本來就願意", "element": "earth" },
+      { "label": "找其他朋友填補這個空缺", "element": "fire" }
+    ]
+  },
+  {
+    "id": 39,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "你很信任的人讓你失望了。你怎麼處理這份信任？",
+    "entry": "你有沒有被你非常信任的人傷害過？",
+    "options": [
+      { "label": "再給一次機會，但會更小心", "element": "earth" },
+      { "label": "不再信任這個人，但也不翻臉", "element": "metal" },
+      { "label": "需要一個人想很久才能消化", "element": "water" },
+      { "label": "直接跟他說我的感受", "element": "wood" }
+    ]
+  },
+  {
+    "id": 40,
+    "category": "relationship",
+    "categoryZh": "關係",
+    "question": "如果你必須從你現在的朋友圈中只留下三個人，你怎麼選？",
+    "entry": "你有沒有想過，誰才是真正重要的人？",
+    "textOnly": true
+  },
+  {
+    "id": 41,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你在群體中通常扮演什麼角色？你喜歡那個角色嗎？",
+    "entry": "你在朋友圈裡是什麼定位？",
+    "options": [
+      { "label": "帶頭的人，大家習慣聽我的", "element": "wood" },
+      { "label": "氣氛製造者，我負責讓大家開心", "element": "fire" },
+      { "label": "照顧者，確保每個人都好", "element": "earth" },
+      { "label": "觀察者，我比較常在旁邊看", "element": "water" }
+    ]
+  },
+  {
+    "id": 42,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "壓力很大的時候，你身體哪裡會先反應？",
+    "entry": "你有沒有注意過壓力大的時候自己的身體？",
+    "options": [
+      { "label": "頭痛或肩頸痠痛", "element": "metal" },
+      { "label": "胃不舒服或食慾改變", "element": "earth" },
+      { "label": "失眠或做奇怪的夢", "element": "water" },
+      { "label": "心跳加速、坐不住", "element": "fire" }
+    ]
+  },
+  {
+    "id": 43,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你最近一次哭，是因為什麼？",
+    "entry": "你容易哭嗎？你怎麼看待自己哭這件事？",
+    "options": [
+      { "label": "看電影或聽音樂被觸動", "element": "water" },
+      { "label": "跟人吵架或被誤解", "element": "fire" },
+      { "label": "累到崩潰", "element": "wood" },
+      { "label": "想到某個人或某段記憶", "element": "earth" }
+    ]
+  },
+  {
+    "id": 44,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你做決定的時候，通常聽頭腦還是聽心？",
+    "entry": "你有沒有一次聽了心的聲音、結果很意外的經驗？",
+    "options": [
+      { "label": "頭腦，我需要邏輯", "element": "metal" },
+      { "label": "心，直覺很少騙我", "element": "fire" },
+      { "label": "看情況，小事聽心、大事聽腦", "element": "earth" },
+      { "label": "我會等，等到頭腦跟心說同一件事", "element": "water" }
+    ]
+  },
+  {
+    "id": 45,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你對「成功」的定義，跟你爸媽的定義一樣嗎？",
+    "entry": "你有沒有做過一件你覺得很成功但別人不理解的事？",
+    "options": [
+      { "label": "差很多，我已經放棄跟他們解釋了", "element": "metal" },
+      { "label": "有一部分重疊，但核心不同", "element": "water" },
+      { "label": "其實差不多，但我不想承認", "element": "earth" },
+      { "label": "我還在尋找自己的定義", "element": "fire" }
+    ]
+  },
+  {
+    "id": 46,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你有沒有一個你很想成為的樣子，但到現在還沒做到？",
+    "entry": "你理想中的自己和現在的自己差多遠？",
+    "options": [
+      { "label": "差很遠，但我在努力", "element": "wood" },
+      { "label": "其實已經很接近，只是我不滿意", "element": "metal" },
+      { "label": "我已經放棄那個理想了", "element": "water" },
+      { "label": "我現在的樣子就是我想要的", "element": "earth" }
+    ]
+  },
+  {
+    "id": 47,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "獨處的時候你通常做什麼？那個選擇說明了你什麼？",
+    "entry": "你喜歡獨處嗎？還是你只是習慣了？",
+    "options": [
+      { "label": "看劇、滑手機，讓腦袋放空", "element": "water" },
+      { "label": "整理東西、清掃、做家事", "element": "earth" },
+      { "label": "做自己的專案或學新東西", "element": "wood" },
+      { "label": "約人出來，我不太喜歡一個人", "element": "fire" }
+    ]
+  },
+  {
+    "id": 48,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你覺得自己最大的矛盾是什麼？",
+    "entry": "你有沒有覺得自己身上有兩種完全相反的東西？",
+    "textOnly": true
+  },
+  {
+    "id": 49,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "如果明天醒來你變成一個完全不同的人，你最想改變什麼？",
+    "entry": "你有沒有想過如果可以重新來過的話？",
+    "options": [
+      { "label": "性格——更大膽或更溫和", "element": "wood" },
+      { "label": "一段關係——修復或放下", "element": "earth" },
+      { "label": "能力——學一個一直想學的東西", "element": "metal" },
+      { "label": "什麼都不改，只是想重新體驗", "element": "fire" }
+    ]
+  },
+  {
+    "id": 50,
+    "category": "self",
+    "categoryZh": "自我",
+    "question": "你最近有沒有一個「我居然是這樣的人」的發現？",
+    "entry": "你對自己最意外的發現是什麼？",
+    "textOnly": true
+  },
+  {
+    "id": 51,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你正在做一件很重要的事，突然來了一件更急的事。你怎麼辦？",
+    "entry": "你習慣先做重要的還是先做緊急的？",
+    "options": [
+      { "label": "先處理急的，重要的等等", "element": "fire" },
+      { "label": "忍住，重要的先做完", "element": "metal" },
+      { "label": "看看急的可不可以交給別人", "element": "earth" },
+      { "label": "兩個都想做，最後都沒做好", "element": "water" }
+    ]
+  },
+  {
+    "id": 52,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你已經下定決心要改變一件事，但身邊的人都不支持。你還做嗎？",
+    "entry": "你有沒有一個人堅持過一件事？",
+    "options": [
+      { "label": "做，別人不懂是別人的事", "element": "wood" },
+      { "label": "會動搖，但最後還是做", "element": "fire" },
+      { "label": "先暫停，搞清楚他們為什麼反對", "element": "water" },
+      { "label": "放棄，他們可能是對的", "element": "earth" }
+    ]
+  },
+  {
+    "id": 53,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你現在最不敢面對的一件事是什麼？你在怕什麼？",
+    "entry": "你有沒有一件事你一直在拖？",
+    "options": [
+      { "label": "怕失敗，丟臉受不了", "element": "fire" },
+      { "label": "怕成功之後要承受更多", "element": "water" },
+      { "label": "怕傷害到別人", "element": "earth" },
+      { "label": "怕自己做不到自己的標準", "element": "metal" }
+    ]
+  },
+  {
+    "id": 54,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "有人質疑你的專業或能力。你內心的反應是？",
+    "entry": "你有沒有被人懷疑過你做的到？",
+    "options": [
+      { "label": "用結果證明他錯了", "element": "wood" },
+      { "label": "表面鎮定但內心很受傷", "element": "water" },
+      { "label": "認真考慮他說的有沒有道理", "element": "metal" },
+      { "label": "跟信任的人抱怨一下就好了", "element": "fire" }
+    ]
+  },
+  {
+    "id": 55,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你的底線被踩了。你怎麼反應？",
+    "entry": "你的底線是什麼？你有沒有被迫退讓過？",
+    "options": [
+      { "label": "立刻爆發，絕不退讓", "element": "wood" },
+      { "label": "冷處理，但心裡已經判了對方死刑", "element": "metal" },
+      { "label": "先忍，之後找時機處理", "element": "water" },
+      { "label": "很受傷但不知道怎麼表達", "element": "earth" }
+    ]
+  },
+  {
+    "id": 56,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你覺得你現在的生活是你「選的」還是「被推著走到的」？",
+    "entry": "你有沒有一個時刻覺得自己好像不是在過自己的人生？",
+    "options": [
+      { "label": "大部分是我選的，很少後悔", "element": "wood" },
+      { "label": "一半一半，有些我選、有些身不由己", "element": "earth" },
+      { "label": "說實話，很多都是被推著走的", "element": "water" },
+      { "label": "以前是被推著走，現在開始在選了", "element": "fire" }
+    ]
+  },
+  {
+    "id": 57,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你最大的遺憾，你會選擇帶著它走下去還是放下它？",
+    "entry": "你有沒有一件事到現在還放不下？",
+    "textOnly": true
+  },
+  {
+    "id": 58,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你有沒有為了安全感放棄過自由？值得嗎？",
+    "entry": "你是比較需要安全感還是自由？",
+    "options": [
+      { "label": "有，值得——穩定讓我心安", "element": "earth" },
+      { "label": "有，後來非常後悔", "element": "fire" },
+      { "label": "沒有，我不會為安全感妥協", "element": "wood" },
+      { "label": "我一直在這兩者之間拉扯", "element": "water" }
+    ]
+  },
+  {
+    "id": 59,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "你覺得「堅持」和「固執」的差別在哪裡？你是哪一種？",
+    "entry": "你有沒有被人說過你太固執？",
+    "options": [
+      { "label": "差在結果——成功就是堅持，失敗就是固執", "element": "metal" },
+      { "label": "差在有沒有在聽別人的聲音", "element": "earth" },
+      { "label": "差在你痛苦不痛苦——痛苦的就是固執", "element": "water" },
+      { "label": "沒差，都是不願意放手", "element": "wood" }
+    ]
+  },
+  {
+    "id": 60,
+    "category": "challenge",
+    "categoryZh": "挑戰",
+    "question": "如果你可以告訴未來的自己一件事，你會說什麼？",
+    "entry": "你對未來最大的期待或擔心是什麼？",
+    "textOnly": true
   }
 ]

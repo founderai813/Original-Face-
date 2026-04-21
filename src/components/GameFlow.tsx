@@ -81,6 +81,27 @@ export default function GameFlow() {
     setTimeout(() => setSeasonRevealed(true), 100);
   }
 
+  // ── Step 2：回上一題 ──
+  function handleGoBack() {
+    if (globalIdx <= 0) return;
+
+    // 移除最後一筆回答
+    const newAnswers = [...playerAnswers];
+    newAnswers.pop();
+    setPlayerAnswers(newAnswers);
+    setCurrentText("");
+    setCurrentChoice(null);
+
+    if (cardIdx > 0) {
+      setCardIdx(cardIdx - 1);
+    } else if (phaseIdx > 0) {
+      const prevPhase = phases[phaseIdx - 1];
+      setPhaseIdx(phaseIdx - 1);
+      setCardIdx(prevPhase.cards.length - 1);
+      setShowPhaseIntro(false);
+    }
+  }
+
   // ── Step 2：情境問題 ──
   function handleAnswerSubmit() {
     if (!currentCard) return;
@@ -399,13 +420,23 @@ export default function GameFlow() {
                 )}
 
                 <div className="flex justify-between items-center">
-                  <span className="text-gold-dark/40 text-xs">
-                    {currentCard.options && !currentCard.textOnly
-                      ? currentChoice
-                        ? "已選擇"
-                        : "選一個"
-                      : `${currentText.trim().length} 字`}
-                  </span>
+                  <div className="flex items-center gap-3">
+                    {globalIdx > 0 && (
+                      <button
+                        onClick={handleGoBack}
+                        className="text-gold-dark/60 text-xs hover:text-gold-main transition-colors"
+                      >
+                        ← 上一題
+                      </button>
+                    )}
+                    <span className="text-gold-dark/40 text-xs">
+                      {currentCard.options && !currentCard.textOnly
+                        ? currentChoice
+                          ? "已選擇"
+                          : "選一個"
+                        : `${currentText.trim().length} 字`}
+                    </span>
+                  </div>
                   <button
                     onClick={handleAnswerSubmit}
                     disabled={
