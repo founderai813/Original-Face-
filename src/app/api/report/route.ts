@@ -37,7 +37,7 @@ const ReportRequestSchema = z.object({
 /**
  * POST /api/report
  *
- * 計算八字 → 呼叫 Anthropic API 生成報告，以串流回傳純文字。
+ * 計算八字 → 呼叫 Gemini API 生成報告，以串流回傳純文字。
  *
  * TODO：付費版本（tier=full）需要先走金流驗證，目前開放純 dev 測試。
  */
@@ -57,9 +57,9 @@ export async function POST(request: Request) {
     );
   }
 
-  if (!process.env.ANTHROPIC_API_KEY) {
+  if (!process.env.GEMINI_API_KEY) {
     return NextResponse.json(
-      { error: "ANTHROPIC_API_KEY not set on the server" },
+      { error: "GEMINI_API_KEY not set on the server" },
       { status: 500 },
     );
   }

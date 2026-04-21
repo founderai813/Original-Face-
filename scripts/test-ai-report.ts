@@ -133,7 +133,7 @@ for (let i = 0; i < 2; i++) {
     tier,
   });
   console.log(
-    `   第${i + 1}次：input=${result.usage.inputTokens}、output=${result.usage.outputTokens}、cache_write=${result.usage.cacheCreationInputTokens}、cache_read=${result.usage.cacheReadInputTokens}`,
+    `   第${i + 1}次：model=${result.model}、字數=${result.content.length}`,
   );
 }
 
