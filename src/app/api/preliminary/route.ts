@@ -66,7 +66,7 @@ export async function POST(request: Request) {
       try {
         const result = await model.generateContentStream({
           contents: [{ role: "user", parts: [{ text: userMessage }] }],
-          generationConfig: { maxOutputTokens: 512 },
+          generationConfig: { maxOutputTokens: 1024 },
         });
 
         for await (const chunk of result.stream) {
